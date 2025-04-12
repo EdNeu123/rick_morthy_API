@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+
+
+
+ <body>
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id">
+    <button onclick="buscar_api()">Buscar</button>
+
+    <!-- <button onclick="consumoAPI()">Consumir API</button> -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Species</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody id="fact">
+            <!-- Onde será exibido o consumo da API -->
+        </tbody>
+    </table>
+
+    <script src="buscar_api.js"></script>
+</body>
+
+ </html>
