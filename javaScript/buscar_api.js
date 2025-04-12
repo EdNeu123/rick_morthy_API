@@ -12,8 +12,8 @@ function buscar_api() {
             tabela.innerHTML = ' '; //limpa a tabela antes de preencher
             const linha = ` <tr>
                 <td>${data.id}</td>
-                <td>${data.name}</td>
-                <td>${data.species}</td>
+                <td>${data.name  || 'Sem Informação'}</td>
+                <td>${data.species  || 'Sem Informação'}</td>
                 <td>${data.type  || 'Sem Informação' }</td>
                 </tr> `;
             tabela.innerHTML = linha;
