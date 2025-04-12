@@ -5,37 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/detalhes.css">
 </head>
 
 
 
 <body>
-    <label for="id">Insira o ID do seu Personagem:</label>
-    <input type="number" id="id" name="id" placeholder="Insira um número de ID">
-    <button onclick="buscar_api()">Buscar</button>
-
-
-    <h1>Dados do seu Personagem:</h1>
+    <h1>Dados detalhados do seu Personagem:</h1>
 
     <!-- <button onclick="consumoAPI()">Consumir API</button> -->
     <table>
         <thead>
             <tr>
+                <th>Image</th>
                 <th>ID</th>
                 <th>Name</th>
                 <th>Species</th>
                 <th>Type</th>
+                <th>Gender</th>
             </tr>
         </thead>
-        <tbody id="Rick">
+        <tbody id="Rick2">
             <!-- Onde será exibido o consumo da API -->
         </tbody>
     </table>
 
-    <button onclick="window.location.href='detalhes.html'">Mostrar Detalhes</button>
+    <!-- Primeiro carrega o script que contém a função -->
+    <script src="consumir_api.js"></script>
 
-    <script src="buscar_api.js"></script>
+    <!-- Depois executa a função assim que o DOM estiver pronto -->
+    <script>
+        window.onload = consumoAPI();
+    </script>
 </body>
 
 </html>
